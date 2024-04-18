@@ -34,8 +34,8 @@ class PoseClassifierApp(QWidget):
 
     def load_model(self):
         # 분류 모델을 로드합니다.
-        self.model = load_model("C:\dataset\Ex1\converted_keras\keras_Model.h5", compile=False)
-        self.class_names = open("C:\dataset\Ex1\converted_keras\labels.txt", "r", encoding="utf-8").readlines()
+        self.model = load_model("./model/keras_Model.h5", compile=False)
+        self.class_names = open("./model/labels.txt", "r", encoding="utf-8").readlines()
 
     def update_frame(self):
         ret, frame = self.cap.read()  # 카메라로부터 프레임을 읽어옵니다.
